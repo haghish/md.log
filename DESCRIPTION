@@ -1,0 +1,12 @@
+Package: md.log
+Type: Package
+Title: Produces Markdown log file with a built-in function call
+Version: 0.1.0
+Author: E. F. Haghish
+Maintainer: The package maintainer <e.f.haghish@uni-greifswald.de>
+Description: The package produces clean and neat log file
+    and also provide an argument to include the function call inside the Markdown log
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
