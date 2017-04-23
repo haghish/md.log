@@ -52,6 +52,49 @@ only be used to separate the date and time formats}
 produces Markdown log files with an optional argument
 to include the function call inside the Markdown log file.
 }
+\examples{
+\dontrun{
+# --------------------------------------------------------------------
+# Testing the md.log package
+# ====================================================================
+
+child = function() {
+  md.log("current function", level="dope!")
+}
+parent = function(){
+ md.log("step 2")
+ child()
+}
+
+grandparent = function() {
+ md.log("step 3")
+ parent()
+}
+
+# The main test function that produces the log and calls the other functions
+md.log.test = function() {
+ require(md.log)
+ md.log("Initiating a new Markdown log", file="markdown.log")
+
+ # starting the logs
+ md.log("a simple MONOSPACE log")
+ md.log("Adding a level", level="notice")
+ md.log("level makes you pay attention to a particular line")
+
+ # add a subsection and a paragraph in the log
+ md.log("This is a subsection", section="subsection")
+ md.log("This is a text paragraph. If you need to explain something in more details, you can write a text paragraph instead of printing it in the log...", section="paragraph")
+
+ # testing the function call
+ child()
+ md.log("so far so good! now let's test a more complex nest")
+ grandparent()
+}
+
+md.log.test()
+}
+
+}
 \author{
 E. F. Haghish \cr
 Institute for Community Medicine \cr
