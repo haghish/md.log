@@ -54,6 +54,7 @@
 #'child = function() {
 #'   md.log("current function", level="dope!")
 #'}
+#'
 #'parent = function(){
 #'  md.log("step 2")
 #'  child()
@@ -76,7 +77,7 @@
 #'
 #'  # add a subsection and a paragraph in the log
 #'  md.log("This is a subsection", section="subsection")
-#'  md.log("This is a text paragraph. If you need to explain something in more details, you can write a text paragraph instead of printing it in the log...", section="paragraph")
+#'  md.log("This is a text paragraph for detailed explanation...", section="paragraph")
 #'
 #'  # testing the function call
 #'  child()
@@ -101,7 +102,13 @@
 #' University of Freiburg, Germany \cr
 #' \email{haghish@imbi.uni-freiburg.de} \cr
 #'
-#' @import futile.logger
+#' @importFrom futile.logger layout.format
+#' @importFrom futile.logger flog.appender
+#' @importFrom futile.logger appender.file
+#' @importFrom futile.logger flog.info
+#' @importFrom futile.logger flog.threshold
+#' @importFrom futile.logger flog.layout
+#' @importFrom utils  head
 #' @export
 
 # packrat::opts$external.packages(c("devtools", "roxygen2"))
@@ -119,7 +126,6 @@ md.log = function(msg,
 
   # Prepare the package and get the trace path
   # ------------------------------------------------------------------
-  require(futile.logger)
   path = trace.call()
   list = path[-length(path)]
 
@@ -209,7 +215,6 @@ md.log = function(msg,
 
     format = paste("    ", level, dtsymbol, fsymbol, " ~m", sep = "")
     flog.layout(layout.format(format, datetime.fmt=dateTime))
-    flog.threshold(INFO)
     flog.info('%s' , msg )
   }
 }

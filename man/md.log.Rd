@@ -61,6 +61,7 @@ to include the function call inside the Markdown log file.
 child = function() {
   md.log("current function", level="dope!")
 }
+
 parent = function(){
  md.log("step 2")
  child()
@@ -83,7 +84,7 @@ md.log.test = function() {
 
  # add a subsection and a paragraph in the log
  md.log("This is a subsection", section="subsection")
- md.log("This is a text paragraph. If you need to explain something in more details, you can write a text paragraph instead of printing it in the log...", section="paragraph")
+ md.log("This is a text paragraph for detailed explanation...", section="paragraph")
 
  # testing the function call
  child()
