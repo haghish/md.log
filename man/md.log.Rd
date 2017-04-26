@@ -53,7 +53,6 @@ produces Markdown log files with an optional argument
 to include the function call inside the Markdown log file.
 }
 \examples{
-\dontrun{
 # --------------------------------------------------------------------
 # Testing the md.log package
 # ====================================================================
@@ -93,8 +92,6 @@ md.log.test = function() {
 }
 
 md.log.test()
-}
-
 }
 \author{
 E. F. Haghish \cr

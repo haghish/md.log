@@ -46,7 +46,7 @@
 #' only be used to separate the date and time formats
 #'
 #' @examples
-#' \dontrun{
+   # \dontrun{
 #'# --------------------------------------------------------------------
 #'# Testing the md.log package
 #'# ====================================================================
@@ -86,8 +86,7 @@
 #'}
 #'
 #'md.log.test()
-#' }
-#'
+   # }
 
 
 
@@ -108,7 +107,8 @@
 #' @importFrom futile.logger flog.info
 #' @importFrom futile.logger flog.threshold
 #' @importFrom futile.logger flog.layout
-#' @importFrom utils  head
+#' @importFrom utils head
+#' @importFrom utils sessionInfo
 #' @export
 
 # packrat::opts$external.packages(c("devtools", "roxygen2"))
@@ -143,7 +143,7 @@ md.log = function(msg,
       flog.info(paste(paste(replicate(nchar(msg), "="),collapse = ""),"\n", collapse = ""))
       flog.info('    Date and Time  :  %s', Sys.time())
       flog.info('    System         :  %s  %s  %s', info$os, info$release, info$cpu)
-      flog.info('    Version        :  %s \n\n' , R.Version()$version.string )
+      flog.info('    R Version      :  %s \n\n' , R.Version()$version.string )
     }
   }
 
