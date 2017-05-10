@@ -3,7 +3,7 @@ Type: Package
 Title: Produces Markdown Log File with a Built-in Function Call
 Version: 0.1.2
 Author: E. F. Haghish
-Maintainer: E. F. Haghish <e.f.haghish@uni-greifswald.de>
+Maintainer: E. F. Haghish <haghish@imbi.uni-freiburg.de>
 Description: Produces clean and neat Markdown log file
     and also provide an argument to include the function call inside the Markdown log.
 License: MIT + file LICENSE
