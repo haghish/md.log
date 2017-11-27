@@ -12,8 +12,7 @@ Installing
 To install **`md.log`** package in R:
 
 ```js
-library(devtools)
-install_github("haghish/md.log")
+devtools::install_github("haghish/md.log")
 ```
 
 
