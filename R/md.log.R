@@ -45,6 +45,9 @@
 #' and by default is \code{"\%Y-\%m-\%d \%H:\%M:\%S"}. whitespace should
 #' only be used to separate the date and time formats
 #'
+#' @param print logical. if \code{TRUE}, the massage is
+#'              printed in R console as well.
+#'
 #' @examples
    # \dontrun{
 #'# --------------------------------------------------------------------
@@ -122,6 +125,7 @@ md.log = function(msg,
                    trace=TRUE,
                    date=FALSE,
                    time=FALSE,
+                   print=FALSE,
                    datetime.fmt="%Y-%m-%d %H:%M:%S") {
 
   # Prepare the package and get the trace path
@@ -169,6 +173,9 @@ md.log = function(msg,
   # Write monospace text
   # ------------------------------------------------------------------
   else {
+
+    if (print) print(msg)             # print in the console
+
     datetime = unlist(strsplit(datetime.fmt, " "))
     date.fmt = datetime[1]
     time.fmt = datetime[2]
