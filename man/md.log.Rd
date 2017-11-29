@@ -6,7 +6,7 @@
 \usage{
 md.log(msg, file = "", append = FALSE, sys.info = TRUE,
 section="monospace", level="", trace=TRUE, date=FALSE,
-time=FALSE,datetime.fmt="\%Y-\%m-\%d \%H:\%M:\%S")
+time=FALSE, print=FALSE, datetime.fmt="\%Y-\%m-\%d \%H:\%M:\%S")
 }
 \arguments{
 \item{msg}{the text that is to be printed in the log file. By default
