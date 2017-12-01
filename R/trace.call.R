@@ -6,7 +6,8 @@ trace.call = function(..., call=sys.calls()){
 
   # avoid some functions in tryCatch
   # ------------------------------------------------------------------
-  call = call[!call %in% c("tryCatchList", "tryCatchOne", "doTryCatch")]
+  call = call[!call %in% c("tryCatchList", "tryCatchOne", "doTryCatch",
+                           c("withVisible","eval","eval" ))]
 
   return(call)
 }

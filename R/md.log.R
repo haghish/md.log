@@ -132,6 +132,7 @@ md.log = function(msg,
   # ------------------------------------------------------------------
   path = trace.call()
   list = path[-length(path)]
+  #print(list)
 
   # Write to a new file or append to the previous log
   # ------------------------------------------------------------------
