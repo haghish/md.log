@@ -132,7 +132,6 @@ md.log = function(msg,
   # ------------------------------------------------------------------
   path = trace.call()
   list = path[-length(path)]
-  #print(list)
 
   # Write to a new file or append to the previous log
   # ------------------------------------------------------------------
@@ -178,13 +177,12 @@ md.log = function(msg,
       cat(paste0(msg, "\n"))
       cat(line)
     }
-  }
+
 
   # Write monospace text
   # ------------------------------------------------------------------
-  else {
-
-    if (print) print(msg)             # print in the console
+  } else {
+    if (print) cat(msg)             # print in the console
 
     datetime = unlist(strsplit(datetime.fmt, " "))
     date.fmt = datetime[1]
@@ -215,8 +213,7 @@ md.log = function(msg,
     if (!is.null(date) | !is.null(time)) {
       dateTime = trimws(paste(date, time))
       dtsymbol = " [~t]"
-    }
-    else {
+    } else {
       dateTime = ""
       dtsymbol = ""
     }
@@ -225,12 +222,12 @@ md.log = function(msg,
       fsymbol = ""
       p = paste(paste(list, collapse=" > "),":", sep = "")
       msg = paste(p, msg)
-    }
-    else {
+    } else {
       fsymbol = " ~f:"
     }
 
     format = paste("    ", level, dtsymbol, fsymbol, " ~m", sep = "")
+
     flog.layout(layout.format(format, datetime.fmt=dateTime))
     flog.info('%s' , msg )
   }
