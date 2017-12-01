@@ -157,17 +157,26 @@ md.log = function(msg,
   else if (section != "monospace") {
     n = nchar(msg)
     flog.layout(layout.format('~m'))                                  # Only log the message
+    line = ""
     if (section == "section") {
       flog.info("\n")
       flog.info(msg)
-      flog.info(paste(paste(replicate(n, "="), collapse = ""),"\n", collapse = ""))
+      line = paste(paste(replicate(n, "="), collapse = ""),"\n", collapse = "")
+      flog.info(line)
     } else if (section == "subsection") {
       flog.info("\n")
       flog.info(msg)
-      flog.info(paste(paste(replicate(n, "-"), collapse = ""),"\n", collapse = ""))
+      line = paste(paste(replicate(n, "-"), collapse = ""),"\n", collapse = "")
+      flog.info(line)
     } else if (section == "paragraph") {
       flog.info(msg)
-      flog.info("")
+      line = ""
+      flog.info(line)
+    }
+
+    if (print) {
+      cat(paste0(msg, "\n"))
+      cat(line)
     }
   }
 
