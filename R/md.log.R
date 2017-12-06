@@ -182,7 +182,7 @@ md.log = function(msg,
   # Write monospace text
   # ------------------------------------------------------------------
   } else {
-    if (print) cat(msg)             # print in the console
+    if (print) print(msg)             # print in the console
 
     datetime = unlist(strsplit(datetime.fmt, " "))
     date.fmt = datetime[1]
