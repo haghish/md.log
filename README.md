@@ -1,3 +1,7 @@
+[![](https://cranlogs.r-pkg.org/badges/md.log)](https://cran.r-project.org/package=md.log) [![](https://cranlogs.r-pkg.org/badges/grand-total/md.log?color=orange)](https://cran.r-project.org/package=md.log)
+
+- - -
+
 # md.log : producing Markdown log files with function call in R
 
 
