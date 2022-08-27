@@ -41,14 +41,11 @@ See the **test** directory inside the package for examples
 Author
 ------
   **E. F. Haghish**    
-  Center for Medical Biometry and Medical Informatics    
-  University of Freiburg, Germany       
-  _and_   
-  Department of Mathematics and Computer Science   
-  Univesity of Southern Denmark, Odense, Denmark    
+  Department of Psychology    
+  University of Oslo, Norway       
 
-  _haghish@imbi.uni-freiburg.de_  
-  _http://www.haghish.com/markdoc_  
+  _haghish@uio.no_  
+  _http://www.haghish.com/stats_  
   _[@Haghish](https://twitter.com/Haghish)_   
   
   
